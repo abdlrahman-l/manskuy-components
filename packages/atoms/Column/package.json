@@ -1,8 +1,8 @@
 {
-  "name": "@manskuy/row",
-  "version": "0.1.1",
+  "name": "@manskuy/column",
+  "version": "0.1.2",
   "private": false,
-  "description": "Manskuy UI components that is a Row",
+  "description": "Manskuy UI components that is a Column",
   "license": "MIT",
   "author": "Manskuy",
   "sideEffects": false,
@@ -22,8 +22,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@manskuy/breakpoints": "^0.1.0",
-    "@manskuy/column": "^0.1.0",
-    "@manskuy/use-media-query": "^0.1.0"
+    "@manskuy/breakpoints": "^0.1.1"
   }
 }

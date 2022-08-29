@@ -1,4 +1,5 @@
 import React from 'react';
+import Column from '@manskuy/column';
 import Row from './src/index';
 
 export default {
@@ -6,7 +7,12 @@ export default {
 };
 
 export const RowBasic = () => (
-  <Row alignItems='center'>
-    Another short text.
-  </Row>
+  <Row>
+  <Column spans={[12, 6, 12]}>
+    <p>test kiri</p>
+  </Column>
+  <Column spans={[12, 6, 12]}>
+    <p>test kanan</p>
+  </Column>
+</Row>
 );
