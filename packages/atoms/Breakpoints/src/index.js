@@ -7,3 +7,9 @@ export const MediaQueryInput = {
   desktopAndUp: 'DesktopAndUp',
   tabletAndUp: 'TabletAndUp'
 }
+
+export const mediaQueries = ({ content, breakpoints }) => `
+  @media ${breakpointToMediaQuery[breakpoints]} {
+    ${content}
+  }
+`

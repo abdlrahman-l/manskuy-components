@@ -6,7 +6,7 @@ export default {
 };
 
 export const RowBasic = () => (
-  <Row>
+  <Row alignItems='center'>
     Another short text.
   </Row>
 );
