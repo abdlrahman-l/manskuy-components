@@ -7,7 +7,7 @@ import useMediaQuery from '@manskuy/use-media-query'
 import { RowWrapper } from './styles'
 import { cx } from 'emotion'
 
-const firstRow = (col) => props?.firstRow
+const firstRow = (col) => col?.props?.firstRow
 
 export const spans12onMobile = (col)  =>
   Maybe.fromUndefined(col?.props?.span)
@@ -89,6 +89,10 @@ const Row =
        */
 
       const isTabletOrUp = useMediaQuery('TabletAndUp')
+      const nodes = useMemo(() =>
+        isTabletOrUp === false
+          ? moveFirstToTop(children)
+          : children, [ children, isTabletOrUp ])
 
       return <RowWrapper className={
           cx(
@@ -104,7 +108,7 @@ const Row =
             )
         }
       >
-        test
+        {nodes}
       </RowWrapper>
     }
 
