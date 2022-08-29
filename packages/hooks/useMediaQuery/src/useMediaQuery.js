@@ -6,9 +6,9 @@ export const MediaQueryInput = {
     tabletAndUp: 'TabletAndUp'
 }
 
-const breakpointToMediaQuery = {
+export const breakpointToMediaQuery = {
   DesktopAndUp: '(min-width: 1240px)',
-  TabletAndUp: '(min-width: 768px'
+  TabletAndUp: '(min-width: 768px)'
 }
 
 export default function useMediaQuery(query, defaultValue = false) {
