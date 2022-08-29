@@ -1,5 +1,5 @@
 {
-  "name": "@manskuy/Row",
+  "name": "@manskuy/row",
   "version": "0.1.0",
   "private": false,
   "description": "Manskuy UI components that is a Row",
@@ -12,10 +12,10 @@
     "lib"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production rollup -c"
+    "build": "rollup -c"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
+    "react": "^16.8.0"
   },
   "publishConfig": {
     "access": "public"
