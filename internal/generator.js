@@ -16,32 +16,32 @@ module.exports = function(plop) {
     actions: [
       {
         type: 'add',
-        path: 'packages/{{componentTypes}}/{{name}}/package.json',
+        path: 'packages/{{componentTypes}}s/{{name}}/package.json',
         templateFile: './templates/package.json.hbs'
       },
       {
         type: 'add',
-        path: 'packages/{{componentTypes}}/{{name}}/README.md',
+        path: 'packages/{{componentTypes}}s/{{name}}/README.md',
         templateFile: './templates/README.md.hbs'
       },
       {
         type: 'add',
-        path: 'packages/{{componentTypes}}/{{name}}/LICENSE',
+        path: 'packages/{{componentTypes}}s/{{name}}/LICENSE',
         templateFile: './templates/LICENSE.hbs'
       },
       {
         type: 'add',
-        path: 'packages/{{componentTypes}}/{{name}}/{{name}}.stories.js',
+        path: 'packages/{{componentTypes}}s/{{name}}/{{name}}.stories.js',
         templateFile: './templates/stories.js.hbs'
       },
       {
         type: 'add',
-        path: 'packages/{{componentTypes}}/{{name}}/src/index.js',
+        path: 'packages/{{componentTypes}}s/{{name}}/src/index.js',
         templateFile: './templates/src.index.js.hbs'
       },
       {
         type: 'add',
-        path: 'packages/{{componentTypes}}/{{name}}/rollup.config.js',
+        path: 'packages/{{componentTypes}}s/{{name}}/rollup.config.js',
         templateFile: './templates/rollup.config.js.hbs'
       }
     ]

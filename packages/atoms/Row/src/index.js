@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Test = ({ children, styles = {} }) => {
+export const Row = ({ children, styles = {} }) => {
   return (
     <div>
       {children}

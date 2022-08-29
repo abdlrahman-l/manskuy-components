@@ -1,8 +1,8 @@
 {
-  "name": "@manskuy/Test",
+  "name": "@manskuy/Row",
   "version": "0.1.0",
   "private": false,
-  "description": "Manskuy UI components that is a Test",
+  "description": "Manskuy UI components that is a Row",
   "license": "MIT",
   "author": "Manskuy",
   "sideEffects": false,
@@ -16,7 +16,6 @@
   },
   "peerDependencies": {
     "react": "^16.8.0",
-    "emotion": "^10.0.27"
   },
   "publishConfig": {
     "access": "public"
