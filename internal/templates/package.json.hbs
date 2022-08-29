@@ -1,0 +1,26 @@
+{
+  "name": "@manskuy/{{name}}",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Manskuy UI components that is a {{name}}",
+  "license": "MIT",
+  "author": "Manskuy",
+  "sideEffects": false,
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "cross-env NODE_ENV=production rollup -c"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "emotion": "^10.0.27"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
+
+
