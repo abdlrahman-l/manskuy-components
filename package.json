@@ -36,5 +36,8 @@
     "prerelease": "lerna version minor --amend --yes && yarn build",
     "release": "lerna publish",
     "storybook": "start-storybook -p 6006"
+  },
+  "dependencies": {
+    "monet": "^0.9.3"
   }
 }
