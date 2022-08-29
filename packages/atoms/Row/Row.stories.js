@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row } from './src/index';
+import Row from './src/index';
 
 export default {
   title: 'Row',

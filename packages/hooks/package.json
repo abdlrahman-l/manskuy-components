@@ -1,8 +1,8 @@
 {
-  "name": "@manskuy/row",
+  "name": "@manskuy/hooks",
   "version": "0.1.0",
   "private": false,
-  "description": "Manskuy UI components that is a Row",
+  "description": "Manskuy hooks",
   "license": "MIT",
   "author": "Manskuy",
   "sideEffects": false,
@@ -19,8 +19,7 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "@manskuy/hooks": "^0.1.0"
   }
 }
+
+

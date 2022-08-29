@@ -1,9 +1,13 @@
 import React from 'react';
+import { useMediaQuery } from '@manskuy/hooks';
 
-export const Row = ({ children, styles = {} }) => {
+const Row = ({ children, styles = {} }) => {
+  const isDesktop = useMediaQuery('DesktopAndUp')
   return (
     <div>
-      {children}
+      {String(isDesktop)}
     </div>
   );
 };
+
+export default Row
