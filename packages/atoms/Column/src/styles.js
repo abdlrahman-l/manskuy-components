@@ -81,5 +81,27 @@ export const ColumnWrapper = styled.div`
             height: 100%;
         }
     }
+
+
+    // Flexbox/grid helper classes.
+    &.justifySelfCenter {
+        justify-self: center;
+    }
+
+    &.alignSelfStart {
+        align-self: start;
+    }
+
+    &.alignSelfStretch {
+        align-self: stretch;
+    }
+
+    &.alignSelfCenter {
+        align-self: center;
+    }
+
+    &.alignSelfEnd {
+        align-self: end;
+    }
       
 `

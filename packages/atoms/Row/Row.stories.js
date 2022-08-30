@@ -8,11 +8,11 @@ export default {
 
 export const RowBasic = () => (
   <Row>
-  <Column spans={[12, 6, 12]}>
-    <p>test kiri</p>
-  </Column>
-  <Column spans={[12, 6, 12]}>
-    <p>test kanan</p>
-  </Column>
-</Row>
+    <Column spans={[12, 6, 6]} alignSelf='center'>
+      <p>test kiri</p>
+    </Column>
+    <Column spans={[12, 6, 6]}>
+      <p>test kanan</p>
+    </Column>
+  </Row>
 );
