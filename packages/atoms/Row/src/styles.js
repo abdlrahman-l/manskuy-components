@@ -31,19 +31,15 @@ export const RowWrapper = styled.div`
         height: 100%;
         min-height: 350px;
 
-        ${mediaQueries({
-            content: `
-                min-height: 400px;
-            `,
-            breakpoints: MediaQueryInput.tabletAndUp
-        })}
+        ${mediaQueries(
+            MediaQueryInput.tabletAndUp,
+            'min-height: 400px'
+        )}
 
-        ${mediaQueries({
-            content: `
-                min-height: 600px;
-            `,
-            breakpoints: MediaQueryInput.desktopAndUp
-        })}
+        ${mediaQueries(
+            MediaQueryInput.desktopAndUp,
+            'min-height: 600px;'
+        )}
     }
 
     // When using items per row, ensure they are all equal height based on tallest column.

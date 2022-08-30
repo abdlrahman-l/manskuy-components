@@ -10,8 +10,8 @@ export const MediaQueryInput = {
   mobileOnly: 'MobileOnly'
 }
 
-export const mediaQueries = ({ content, breakpoints }) => `
-  @media ${breakpointToMediaQuery[breakpoints]} {
+export const mediaQueries = (breakpoint, content) => `
+  @media ${breakpointToMediaQuery[breakpoint]} {
     ${content}
   }
 `

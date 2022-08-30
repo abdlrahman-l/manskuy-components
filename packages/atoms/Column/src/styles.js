@@ -24,18 +24,15 @@ export const ColumnWrapper = styled.div`
             clientType.map(type => `
                 &.${type.className}-${i} {
                     ${
-                       mediaQueries({
-                            content: `
-                            ${
-                                i === 0
-                                ? `
-                                    grid-column: none;
-                                    display: none;
-                                `
-                                : `grid-column: span ${i};`
-                            }`,
-                            breakpoints: type.breakpoint
-                        })
+                       mediaQueries(
+                        type.breakpoint,
+                            i === 0
+                            ? `
+                                grid-column: none;
+                                display: none;
+                            `
+                            : `grid-column: span ${i};`
+                        )
                     }
                 }
             `)
@@ -43,10 +40,10 @@ export const ColumnWrapper = styled.div`
     }
 
     &.first.mobile12 {
-        ${mediaQueries({
-            content: `grid-row: 1;`,
-            breakpoints: MediaQueryInput.mobileOnly
-        })}
+        ${mediaQueries(
+            MediaQueryInput.mobileOnly,
+            'grid-row: 1;'
+        )}
     }
 
 
@@ -56,15 +53,15 @@ export const ColumnWrapper = styled.div`
         overflow-x: hidden;
         overflow-y: scroll;
 
-        ${mediaQueries({
-            content: `height: 400px;`,
-            breakpoints: MediaQueryInput.tabletAndUp
-        })}
+        ${mediaQueries(
+            MediaQueryInput.tabletAndUp,
+            'height: 400px;'
+        )}
 
-        ${mediaQueries({
-            content: `height: 600px;`,
-            breakpoints: MediaQueryInput.desktopAndUp
-        })}
+        ${mediaQueries(
+            MediaQueryInput.desktopAndUp,
+            'height: 600px;'
+        )}
     }
 
     // Useful for when components inside the Column should be equal height, such as
