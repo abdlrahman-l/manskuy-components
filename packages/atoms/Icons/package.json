@@ -1,0 +1,26 @@
+{
+  "name": "@manskuy/icons",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Manskuy UI components that is a Icons",
+  "license": "MIT",
+  "author": "Manskuy",
+  "sideEffects": false,
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "emotion": "^10.0.27"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
+
+
