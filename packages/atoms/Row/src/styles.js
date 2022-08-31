@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { mediaQueries, MediaQueryInput } from '@manskuy/breakpoints'
+import { MediaQuery } from '@manskuy/breakpoints'
 
 export const RowWrapper = styled.div`
 
@@ -31,15 +31,9 @@ export const RowWrapper = styled.div`
         height: 100%;
         min-height: 350px;
 
-        ${mediaQueries(
-            MediaQueryInput.tabletAndUp,
-            'min-height: 400px'
-        )}
+        ${MediaQuery.tabletAndUp('min-height: 400px')}
 
-        ${mediaQueries(
-            MediaQueryInput.desktopAndUp,
-            'min-height: 600px;'
-        )}
+        ${MediaQuery.desktopAndUp('min-height: 600px;')}
     }
 
     // When using items per row, ensure they are all equal height based on tallest column.

@@ -1,21 +1,23 @@
 import styled from '@emotion/styled'
-import { mediaQueries, MediaQueryInput } from '@manskuy/breakpoints'
+import { MediaQuery, MediaQueryInput } from '@manskuy/breakpoints'
 
 
+const [desktop, tablet, mobile] = Object.keys(MediaQueryInput)
 const clientType = [
     {
         className: 'mobile',
-        breakpoint: MediaQueryInput.mobileOnly
+        breakpoint: mobile
     },
     {
         className: 'tablet',
-        breakpoint: MediaQueryInput.tabletAndUp
+        breakpoint: tablet
     },
     {
         className: 'desktop',
-        breakpoint: MediaQueryInput.desktopAndUp
+        breakpoint: desktop
     }
 ]
+
 
 export const ColumnWrapper = styled.div`
     ${
@@ -24,9 +26,8 @@ export const ColumnWrapper = styled.div`
             clientType.map(type => `
                 &.${type.className}-${i} {
                     ${
-                       mediaQueries(
-                        type.breakpoint,
-                            i === 0
+                       MediaQuery[type.breakpoint](
+                        i === 0
                             ? `
                                 grid-column: none;
                                 display: none;
@@ -40,10 +41,7 @@ export const ColumnWrapper = styled.div`
     }
 
     &.first.mobile12 {
-        ${mediaQueries(
-            MediaQueryInput.mobileOnly,
-            'grid-row: 1;'
-        )}
+        ${MediaQuery.mobileOnly('grid-row: 1;')}
     }
 
 
@@ -53,15 +51,9 @@ export const ColumnWrapper = styled.div`
         overflow-x: hidden;
         overflow-y: scroll;
 
-        ${mediaQueries(
-            MediaQueryInput.tabletAndUp,
-            'height: 400px;'
-        )}
+        ${MediaQuery.tabletAndUp('height: 400px;')}
 
-        ${mediaQueries(
-            MediaQueryInput.desktopAndUp,
-            'height: 600px;'
-        )}
+        ${MediaQuery.desktopAndUp('height: 600px;')}
     }
 
     // Useful for when components inside the Column should be equal height, such as
