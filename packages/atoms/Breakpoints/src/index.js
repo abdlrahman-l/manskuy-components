@@ -1,6 +1,6 @@
 export const breakpointToMediaQuery = {
   DesktopAndUp: '(min-width: 1240px)',
-  TabletAndUp: '(min-width: 768px)',
+  TabletAndUp: '(min-width: 768px) and (max-width: 1239px)',
   MobileOnly: '(max-width: 767px)'
 }
 

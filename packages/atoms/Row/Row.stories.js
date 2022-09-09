@@ -7,11 +7,11 @@ export default {
 };
 
 export const RowBasic = () => (
-  <Row>
-    <Column spans={[12, 6, 6]} alignSelf='center'>
+  <Row gap='large'>
+    <Column spans={[12, 6, 12]} alignSelf='center'>
       <p>test kiri</p>
     </Column>
-    <Column spans={[12, 6, 6]}>
+    <Column spans={[12, 6, 12]}>
       <p>test kanan</p>
     </Column>
   </Row>

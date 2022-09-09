@@ -5,7 +5,7 @@ import {
 import { Maybe } from 'monet'
 import useMediaQuery from '@manskuy/use-media-query'
 import { RowWrapper } from './styles'
-import { cx } from 'emotion'
+import { cx } from '@emotion/css'
 
 const firstRow = (col) => col?.props?.firstRow
 

@@ -1,8 +1,8 @@
 {
-  "name": "@manskuy/icons",
-  "version": "0.1.4",
+  "name": "@manskuy/header",
+  "version": "0.1.0",
   "private": false,
-  "description": "Manskuy UI components that is a Icons",
+  "description": "Manskuy UI components that is a Header",
   "license": "MIT",
   "author": "Manskuy",
   "sideEffects": false,
@@ -20,5 +20,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@manskuy/icons": "^0.1.0"
   }
 }

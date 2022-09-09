@@ -1,4 +1,4 @@
-import { cx } from 'emotion'
+import { cx } from '@emotion/css'
 import { ColumnWrapper } from './styles'
 
 // export type Span = 0|1|2|3|4|5|6|7|8|9|10|11|12
@@ -51,9 +51,9 @@ const Column = ({
 }) => {
   return (
     <ColumnWrapper className={cx(
-        { [`mobile-${spans[0]}`]: !!spans[0] },
-        { [`tablet-${spans[1]}`]: !!spans[1] },
         { [`desktop-${spans[2]}`]: !!spans[2] },
+        { [`tablet-${spans[1]}`]: !!spans[1] },
+        { [`mobile-${spans[0]}`]: !!spans[0] },
         { equalHeightChildren: equalHeightChildren },
         { ['alignSelfStart']: alignSelf === 'start' },
         { ['alignSelfCenter']: alignSelf === 'center' },

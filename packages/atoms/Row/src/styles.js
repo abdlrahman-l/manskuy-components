@@ -42,4 +42,24 @@ export const RowWrapper = styled.div`
     }
 
 
+    // Gap configuration classes.
+    &.gapNone {
+        gap: 0;
+    }
+
+    &.gapSmall,
+    &.gapMedium,
+    &.gapLarge {
+        gap: 16px;
+    }
+
+    &.gapMedium {
+        ${MediaQuery.tabletAndUp('gap: 32px')}
+        ${MediaQuery.desktopAndUp('gap: 32px')}
+    }
+
+    &.gapLarge {
+        ${MediaQuery.tabletAndUp('gap: 64px')}
+        ${MediaQuery.desktopAndUp('gap: 64px')}
+    }
 `

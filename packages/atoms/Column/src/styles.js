@@ -16,7 +16,7 @@ const clientType = [
         className: 'desktop',
         breakpoint: desktop
     }
-]
+].reverse()
 
 
 export const ColumnWrapper = styled.div`

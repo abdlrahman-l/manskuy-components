@@ -1,6 +1,6 @@
 {
   "name": "@manskuy/breakpoints",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "private": false,
   "description": "Manskuy UI components that is a Breakpoints",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "build": "rollup -c"
   },
   "peerDependencies": {
-    "emotion": "^10.0.27",
+    "emotion": "^11.0.0",
     "react": "^16.8.0"
   },
   "publishConfig": {

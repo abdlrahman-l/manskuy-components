@@ -1,6 +1,6 @@
 {
   "name": "@manskuy/row",
-  "version": "0.1.5",
+  "version": "0.1.10",
   "private": false,
   "description": "Manskuy UI components that is a Row",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "build": "rollup -c"
   },
   "peerDependencies": {
-    "emotion": "^10.0.27",
+    "emotion": "^11.0.0",
     "react": "^16.8.0"
   },
   "publishConfig": {
