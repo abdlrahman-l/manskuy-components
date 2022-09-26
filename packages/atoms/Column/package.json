@@ -1,23 +1,29 @@
 {
   "name": "@manskuy/column",
-  "version": "0.1.9",
+  "version": "0.1.16",
   "private": false,
   "description": "Manskuy UI components that is a Column",
   "license": "MIT",
   "author": "Manskuy",
   "sideEffects": false,
   "main": "lib/cjs/index.js",
+  "typings": "lib/cjs/index.d.ts",
   "module": "lib/esm/index.js",
+  "type":"commonjs",
   "files": [
     "lib"
   ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "tsc": "tsc",
+    "build-tsc": "yarn build && yarn tsc"
+  },
+  "dependencies": {
+    "@manskuy/breakpoints": "^0.1.16"
   },
   "peerDependencies": {
     "emotion": "^11.0.0",
-    "react": "^16.8.0",
-    "@manskuy/breakpoints": "^0.1.1"
+    "react": "^16.8.0"
   },
   "publishConfig": {
     "access": "public"

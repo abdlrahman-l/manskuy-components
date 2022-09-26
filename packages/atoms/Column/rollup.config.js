@@ -1,18 +1,45 @@
-import babel from 'rollup-plugin-babel';
-import pkg from './package.json';
+const babel = require('rollup-plugin-babel')
+const pkg = require('./package.json')	
+const typescript = require('@rollup/plugin-typescript')	
+import { DEFAULT_EXTENSIONS } from '@babel/core';
+let defaults = { compilerOptions: { declaration: true } };
+let override = { compilerOptions: { declaration: false } };
 
-export default [
+const commonConf = {
+	output: [
+		{ dir: 'lib', format: 'cjs',
+		sourcemap: true,
+	
+		preserveModules: true,
+		preserveModulesRoot: 'src'
+	},
+		{ dir: 'lib', format: 'es',
+		sourcemap: true,
+	
+		preserveModules: true,
+		preserveModulesRoot: 'src'
+	}
+	],
+	plugins: [
+		typescript(),
+		babel({
+			rootMode: 'upward',
+			exclude: ['node_modules/**'],
+			extensions: [
+				...DEFAULT_EXTENSIONS,
+				'.ts',
+				'.tsx'
+			]
+		})
+	]
+}
+
+module.exports = [
 	{
-		input: 'src/index.js',
-		output: [
-			{ file: pkg.main, format: 'cjs' },
-			{ file: pkg.module, format: 'es' }
+		input: [
+			'src/index.tsx',
+			'src/styles.ts'
 		],
-		plugins: [
-			babel({
-				rootMode: 'upward',
-				exclude: ['node_modules/**']
-			})
-		]
+		...commonConf
 	}
 ];

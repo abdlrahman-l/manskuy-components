@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import { MediaQuery, MediaQueryInput } from '@manskuy/breakpoints'
 
-
 const [desktop, tablet, mobile] = Object.keys(MediaQueryInput)
 const clientType = [
     {
@@ -21,7 +20,7 @@ const clientType = [
 
 export const ColumnWrapper = styled.div`
     ${
-        [...Array(13).keys()]
+        [...Array.from(Array(13).keys())]
           .map(i => 
             clientType.map(type => `
                 &.${type.className}-${i} {
