@@ -1,11 +1,10 @@
-import {
-  useMemo
-} from 'react'
-
 import { Maybe } from 'monet'
-import useMediaQuery from '@manskuy/use-media-query'
-import { RowWrapper } from './styles'
+import React, { FC, ReactNode, useMemo } from 'react'
+
 import { cx } from '@emotion/css'
+import useMediaQuery from '@manskuy/use-media-query'
+
+import { RowWrapper } from './styles'
 
 const firstRow = (col) => col?.props?.firstRow
 
@@ -30,53 +29,54 @@ export const moveFirstToTop = (children) =>
     , [])
     : children
 
-// export type HeightTypes = 'any' | 'full' | 'responsive' | 'standard'
+export type HeightTypes = 'any' | 'full' | 'responsive' | 'standard'
+export type SiteGridGap = 'large' | 'medium' | 'none' | 'small'
 
-// export type RowProps = {
-//   /** Defaults to 'center' if undefined. Supports stretch and center. */
-//   readonly alignItems?: 'center' | 'stretch'
-//   /** A Function Component that accepts any props and will replace the row's div */
-//   readonly BackgroundComponent?: BackgroundComponentType
-//   /** The row's background color */
-//   readonly backgroundColor?: SiteColor
-//   /** Props that are passed to the BackgroundComponent */
-//   readonly backgroundComponentProps?: Record<string, unknown>
-//   /** The contents of the row */
-//   readonly children: ReactNode
-//   /** data-component attribute value */
-//   readonly dataComponent?: string
-//   /** Whether to show divider lines between columns */
-//   readonly divider?: boolean
-//   /** If multiple rows, determines if the heights of the rows should be equal. Useful for making grid items equal in height. */
-//   readonly equalHeightRows?: boolean
-//   /** Grid gap between columns. Leave empty (undefined) for responsive defaults. Choose 'none' to remove the grid gap. */
-//   readonly gap?: SiteGridGap
-//   /** The height constraints of the row */
-//   readonly height?: HeightTypes
-//   /** Unique HTML id to pass to the parent div */
-//   readonly id?: string
-//   /** Padding on the inside of the row */
-//   readonly padding?: SitePadding
-//   /** Color of the text inside the row */
-//   readonly textColor?: SiteColor
-//   /** Changes body copy/paragraph size to be either 'xs' (12px), 'sm' (14px), or 'md' (16/18px; the default setting). */
-//   readonly textSize?: 'md' | 'sm' | 'xs'
-// }
+export type RowProps = {
+  /** Defaults to 'center' if undefined. Supports stretch and center. */
+  readonly alignItems?: 'center' | 'stretch'
+  /** A Function Component that accepts any props and will replace the row's div */
+  // readonly BackgroundComponent?: BackgroundComponentType
+  /** The row's background color */
+  // readonly backgroundColor?: SiteColor
+  /** Props that are passed to the BackgroundComponent */
+  readonly backgroundComponentProps?: Record<string, unknown>
+  /** The contents of the row */
+  readonly children: ReactNode
+  /** data-component attribute value */
+  readonly dataComponent?: string
+  /** Whether to show divider lines between columns */
+  readonly divider?: boolean
+  /** If multiple rows, determines if the heights of the rows should be equal. Useful for making grid items equal in height. */
+  readonly equalHeightRows?: boolean
+  /** Grid gap between columns. Leave empty (undefined) for responsive defaults. Choose 'none' to remove the grid gap. */
+  readonly gap?: SiteGridGap
+  /** The height constraints of the row */
+  readonly height?: HeightTypes
+  /** Unique HTML id to pass to the parent div */
+  readonly id?: string
+  /** Padding on the inside of the row */
+  // readonly padding?: SitePadding
+  /** Color of the text inside the row */
+  // readonly textColor?: SiteColor
+  /** Changes body copy/paragraph size to be either 'xs' (12px), 'sm' (14px), or 'md' (16/18px; the default setting). */
+  readonly textSize?: 'md' | 'sm' | 'xs'
+}
 
-const Row =
+const Row: FC<RowProps> =
     ({
       alignItems,
-      BackgroundComponent,
-      backgroundColor = 'none',
+      // BackgroundComponent,
+      // backgroundColor = 'none',
       backgroundComponentProps,
       children,
       dataComponent = Row.name,
-      divider,
+      // divider, 
       equalHeightRows,
       gap,
       height = 'any',
       id,
-      padding
+      // padding
     }) => {
 
       /**

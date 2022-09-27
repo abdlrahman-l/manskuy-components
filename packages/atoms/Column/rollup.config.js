@@ -1,9 +1,6 @@
 const babel = require('rollup-plugin-babel')
-const pkg = require('./package.json')	
 const typescript = require('@rollup/plugin-typescript')	
 import { DEFAULT_EXTENSIONS } from '@babel/core';
-let defaults = { compilerOptions: { declaration: true } };
-let override = { compilerOptions: { declaration: false } };
 
 const commonConf = {
 	output: [
